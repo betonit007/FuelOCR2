@@ -8,8 +8,7 @@ const config = require('config')
 
 const User = require('../../models/Users')
 
-//Get route
-
+//Protected GET route to get user infor
 router.get('/', auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password')
