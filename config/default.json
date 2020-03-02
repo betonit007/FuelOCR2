@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://tim:tim4141@cluster0-syt3i.gcp.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "FueLockDown"
+}
