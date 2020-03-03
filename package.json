@@ -6,9 +6,11 @@
   "scripts": {
     "install": "cd client && npm install",
     "client": "cd client && npm run start",
+    "prestart": "npm run tsc",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server/server",
-    "server": "nodemon server/server"
+    "start": "node dist/server",
+    "server": "nodemon dist/server",
+    "tsc": "tsc --outdir dist"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,13 @@
   },
   "homepage": "https://github.com/betonit007/FuelOCR2#readme",
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/config": "0.0.36",
+    "@types/express": "^4.17.2",
+    "@types/jsonwebtoken": "^8.3.8",
+    "@types/mongoose": "^5.7.3",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^13.7.7",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.0",
     "express": "^4.17.1",
@@ -32,10 +41,12 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.2"
-  }
+  },
+  "type": "module"
 }

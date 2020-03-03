@@ -1,38 +1,34 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-
-const ReadingSchema = new Schema({
+import mongoose from 'mongoose';
+var Schema = mongoose.Schema;
+var ReadingSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
-        ref: 'users'
+        ref: 'users',
     },
     store: {
         type: String,
-        required: true
+        required: true,
     },
     street: {
         type: String,
     },
     city: {
         type: String,
-
     },
     state: {
-        type: String
+        type: String,
     },
     total: {
         type: Number,
-        required: true
+        required: true,
     },
     perGallon: {
         type: Number,
-        required: true
+        required: true,
     },
     numGallons: {
         type: Number,
-        required: true
-    }
-    
-})
-
-module.exports = Reading = mongoose.model('reading', ReadingSchema)
+        required: true,
+    },
+});
+export default mongoose.model('reading', ReadingSchema);
