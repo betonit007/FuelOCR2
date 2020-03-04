@@ -65,6 +65,7 @@ router.post(
 //public route to get all readings
 router.get('/', async (req: Request, res: Response) => {
   try {
+    console.log('Backend route hit!');
     const readings = await Reading.find().sort({ date: -1 });
     res.json(readings);
   } catch (err) {
