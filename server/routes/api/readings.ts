@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 const router = express.Router();
 import validator from 'express-validator';
-import auth from '../../middleware/auth.js';
+import auth from '../middleware/auth.js';
 import Reading from '../../models/Readings.js';
 import User from '../../models/Users.js';
 

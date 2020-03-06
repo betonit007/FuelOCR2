@@ -1,8 +1,8 @@
 import express from 'express';
 const router = express.Router();
 
-import readingsRoutes from './readings.js';
+import authRoutes from './auth.js';
 
-router.use(`/readings`, readingsRoutes);
+router.use(`/`, authRoutes);
 
 export default router;
