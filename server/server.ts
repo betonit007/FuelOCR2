@@ -3,7 +3,7 @@ import connectDB from './connection/db.js';
 import morgan from 'morgan';
 const app = express();
 
-import routes from './routes/api/index.js';
+import routes from './routes/index.js';
 
 connectDB();
 
