@@ -1,0 +1,27 @@
+import React, { useState } from 'react'
+
+const AddTransaction = () => {
+
+  const [text, setText] = useState('')
+  const [amount, setAmount] = useState('')
+
+  return (
+    <>
+      <h3>Add new transaction</h3>
+      <form>
+        <div className="form-control">
+          <label htmlFor="text">Text</label>
+          <input value={text} onChange={e=>setText(e)} type="text" placeholder="Enter text..." className="text"/>
+        </div>
+        <label htmlFor="amount">
+          Amount <br/>
+          (negative - expense, positive -income)
+        </label>
+        <input value={amount} onChange={e=>setAmount(e)} type="number" placeholder="Enter amount..."/>
+        <button className="btn">Add transaction</button>
+      </form>
+    </>
+  )
+}
+
+export default AddTransaction
