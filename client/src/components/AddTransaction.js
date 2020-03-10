@@ -11,13 +11,13 @@ const AddTransaction = () => {
       <form>
         <div className="form-control">
           <label htmlFor="text">Text</label>
-          <input value={text} onChange={e=>setText(e)} type="text" placeholder="Enter text..." className="text"/>
+          <input value={text} onChange={e=>setText(e.target.value)} type="text" placeholder="Enter text..." className="text"/>
         </div>
         <label htmlFor="amount">
           Amount <br/>
           (negative - expense, positive -income)
         </label>
-        <input value={amount} onChange={e=>setAmount(e)} type="number" placeholder="Enter amount..."/>
+        <input value={amount} onChange={e=>setAmount(e.target.value)} type="number" placeholder="Enter amount..."/>
         <button className="btn">Add transaction</button>
       </form>
     </>
